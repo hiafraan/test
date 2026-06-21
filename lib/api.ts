@@ -1,7 +1,7 @@
 // Tiny client for the Laravel Sanctum API. All calls run in the browser and
-// attach a Bearer token when one is stored. The base URL is inlined at build
-// time, so it MUST use the NEXT_PUBLIC_ prefix and a literal static lookup.
-export const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
+// attach a Bearer token when one is stored. The base URL is hardcoded (no
+// trailing slash) so it is inlined into the bundle at build time.
+export const API_URL = "https://monitor-api.softlenz.com";
 
 const TOKEN_KEY = "monitor_token";
 
